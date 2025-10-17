@@ -1,0 +1,9 @@
+build/
+**/build/
+*.o
+*.elf
+*.bin
+*.map
+*.log
+*.swp
+.DS_Store

@@ -11,3 +11,4 @@
 2. Flashea ESP32 (proyectos en `esp/`).
 3. Ejecuta pruebas en puerto 3333.
 4. Captura con Wireshark y corre el sniffer de Python.
+# Update for PR test

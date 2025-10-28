@@ -1,0 +1,16 @@
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c: In function 'mqtt_publish_task':
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c:69:50: error: 'MQTT_TOPIC' undeclared (first use in this function)
+   69 |         msg_id = esp_mqtt_client_publish(client, MQTT_TOPIC, message, 0, 1, 0);
+      |                                                  ^~~~~~~~~~
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c:69:50: note: each undeclared identifier is reported only once for each function it appears in
+In file included from /home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c:26:
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c: In function 'mqtt_event_handler':
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c:88:47: error: 'MQTT_TOPIC' undeclared (first use in this function)
+   88 |             esp_mqtt_client_subscribe(client, MQTT_TOPIC, 0);
+      |                                               ^~~~~~~~~~
+/home/carmen/esp/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h:464:85: note: in definition of macro 'esp_mqtt_client_subscribe'
+  464 | #define esp_mqtt_client_subscribe(client_handle, topic_type, qos_or_size) _Generic((topic_type), \
+      |                                                                                     ^~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:76: esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:4613: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

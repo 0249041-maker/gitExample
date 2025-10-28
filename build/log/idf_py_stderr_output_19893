@@ -1,0 +1,13 @@
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c: In function 'publish_task':
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c:84:71: error: 'lat' undeclared (first use in this function)
+   84 |         snprintf(jbuf, sizeof jbuf, "{\"lat\": %.6f, \"lon\": %.6f}", lat, lon);
+      |                                                                       ^~~
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c:84:71: note: each undeclared identifier is reported only once for each function it appears in
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c:84:76: error: 'lon' undeclared (first use in this function); did you mean 'ulong'?
+   84 |         snprintf(jbuf, sizeof jbuf, "{\"lat\": %.6f, \"lon\": %.6f}", lat, lon);
+      |                                                                            ^~~
+      |                                                                            ulong
+make[3]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:76: esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj] Error 1
+make[2]: *** [CMakeFiles/Makefile2:4613: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:1967: CMakeFiles/flash.dir/rule] Error 2
+make: *** [Makefile:299: flash] Error 2

@@ -1,0 +1,1947 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 21:21:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27d8ch (163212) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037db4 vaddr=3ffb0000 size=03c04h ( 15364) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b9c0 vaddr=40080000 size=04658h ( 18008) load[0m
+[0;32mI (171) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9c3e8h (639976) map[0m
+[0;32mI (392) esp_image: segment 4: paddr=000dc410 vaddr=40084658 size=12028h ( 73768) load[0m
+[0;32mI (432) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (432) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (453) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (453) cpu_start: Application information:[0m
+[0;32mI (456) cpu_start: Project name:     mqtt5[0m
+[0;32mI (460) cpu_start: App version:      775dc94-dirty[0m
+[0;32mI (466) cpu_start: Compile time:     Oct 25 2025 21:21:54[0m
+[0;32mI (472) cpu_start: ELF file SHA256:  bb328f307...[0m
+[0;32mI (477) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (482) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (487) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (492) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (497) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (504) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (510) heap_init: At 3FFB8308 len 00027CF8 (159 KiB): DRAM[0m
+[0;32mI (516) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (522) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 40096680 len 00009980 (38 KiB): IRAM[0m
+[0;32mI (536) spi_flash: detected chip: generic[0m
+[0;32mI (539) spi_flash: flash io: dio[0m
+[0;33mW (543) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (558) main_task: Started on CPU0[0m
+[0;32mI (568) main_task: Calling app_main()[0m
+[0;32mI (608) wifi:wifi driver task: 3ffc0280, prio:23, stack:6656, core=0[0m
+[0;32mI (618) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (618) wifi:wifi certification version: v7.0[0m
+[0;32mI (628) wifi:config NVS flash: enabled[0m
+[0;32mI (628) wifi:config nano formating: disabled[0m
+[0;32mI (628) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (628) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (638) wifi:Init management short buffer num: 32[0m
+[0;32mI (638) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (648) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (648) wifi:Init static rx buffer num: 10[0m
+[0;32mI (648) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (658) wifi_init: rx ba win: 6[0m
+[0;32mI (658) wifi_init: tcpip mbox: 32[0m
+[0;32mI (668) wifi_init: udp mbox: 6[0m
+[0;32mI (668) wifi_init: tcp mbox: 6[0m
+[0;32mI (668) wifi_init: tcp tx win: 5760[0m
+[0;32mI (678) wifi_init: tcp rx win: 5760[0m
+[0;32mI (678) wifi_init: tcp mss: 1440[0m
+[0;32mI (688) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (688) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (698) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (788) wifi:mode : sta (68:25:dd:30:22:90)[0m
+[0;32mI (788) wifi:enable tsf[0m
+[0;32mI (788) main_task: Returned from app_main()[0m
+[0;32mI (808) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (808) wifi:state: init -> auth (b0)[0m
+[0;32mI (808) wifi:state: auth -> assoc (0)[0m
+[0;32mI (818) wifi:state: assoc -> run (10)[0m
+[0;32mI (928) wifi:connected with OROZCO_2.4, aid = 13, channel 1, BW20, bssid = b8:dd:71:e9:f0:48[0m
+[0;32mI (928) wifi:security: WPA2-PSK, phy: bgn, rssi: -64[0m
+[0;32mI (928) wifi:pm start, type: 1[0m
+
+[0;32mI (938) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1008) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3068) wifi:<ba-add>idx:0 (ifx:0, b8:dd:71:e9:f0:48), tid:0, ssn:0, winSize:64[0m
+[0;32mI (3938) esp_netif_handlers: sta ip: 192.168.1.75, mask: 255.255.255.0, gw: 192.168.1.254[0m
+[0;32mI (3938) MQTT_EXAMPLE: Wi-Fi connected![0m
+[0;32mI (3938) MQTT_EXAMPLE: Other MQTT event id:7[0m
+[0;32mI (3948) wifi:<ba-add>idx:1 (ifx:0, b8:dd:71:e9:f0:48), tid:6, ssn:2, winSize:64[0m
+[0;32mI (4638) MQTT_EXAMPLE: MQTT connected[0m
+[0;32mI (4648) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.7[0m
+[0;32mI (4648) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (4648) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 0[0m
+[0;32mI (5008) MQTT_EXAMPLE: Other MQTT event id:3[0m
+[0;32mI (5138) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (5138) MQTT_EXAMPLE: Other MQTT event id:3[0m
+[0;32mI (5138) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (5148) MQTT_EXAMPLE: Other MQTT event id:3[0m
+[0;32mI (5148) MQTT_EXAMPLE: Other MQTT event id:3[0m
+[0;32mI (5168) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.7
+[0;32mI (5178) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (5188) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 0
+[0;32mI (5198) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (14658) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.1[0m
+[0;32mI (14658) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (14668) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 5[0m
+[0;32mI (14758) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (14788) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.1
+[0;32mI (14988) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (14998) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (14998) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 5
+[0;32mI (15008) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+����������������������������������������������������������������UB Carmensita0249041/feeds/u0249041.temperature -> 28.4[0m
+[0;32mI (24668) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (24678) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 10[0m
+[0;32mI (24798) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (24808) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.4
+[0;32mI (24948) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (24948) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (24958) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (24968) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 10
+[0;32mI (34678) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.0[0m
+[0;32mI (34678) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (34688) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 15[0m
+[0;32mI (34808) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (34808) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.0
+[0;32mI (34918) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (34948) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (34958) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 15
+[0;32mI (35428) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (44688) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.5[0m
+[0;32mI (44688) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (44698) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 20[0m
+[0;32mI (44988) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (44998) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.5
+[0;32mI (45148) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (45158) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (45158) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (45168) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 20
+[0;32mI (54698) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.9[0m
+[0;32mI (54698) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (54708) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 25[0m
+[0;32mI (54798) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (54828) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.9
+[0;32mI (55078) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (55088) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (55088) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (55098) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 25
+[0;32mI (64708) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.0[0m
+[0;32mI (64708) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (64718) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 30[0m
+[0;32mI (64888) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (64898) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.0
+[0;32mI (65498) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (65508) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (65508) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (65518) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 30
+[0;32mI (74718) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.0[0m
+[0;32mI (74718) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (74728) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 35[0m
+[0;32mI (75048) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (75048) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.0
+[0;32mI (75278) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (75288) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (75288) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 35
+[0;32mI (75298) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (84728) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.0[0m
+[0;32mI (84728) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (84738) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 40[0m
+[0;32mI (85088) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (85088) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.0
+[0;32mI (85308) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (85318) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (85318) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (85328) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 40
+[0;32mI (94738) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.5[0m
+[0;32mI (94738) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (94748) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 45[0m
+[0;32mI (95008) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (95018) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.5
+[0;32mI (95228) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (95228) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (95238) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (95248) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 45
+[0;32mI (104748) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.3[0m
+[0;32mI (104748) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (104758) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 50[0m
+[0;32mI (104868) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (104918) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.3
+[0;32mI (104958) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (105008) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (105008) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 50
+[0;32mI (105018) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (114758) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.8[0m
+[0;32mI (114758) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (114768) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 55[0m
+[0;32mI (115178) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (115178) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.8
+[0;32mI (115738) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (115748) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (115748) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (115758) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 55
+[0;32mI (124768) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.6[0m
+[0;32mI (124768) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (124778) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 60[0m
+[0;32mI (125058) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (125058) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.6
+[0;32mI (125508) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (125518) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (125518) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 60
+[0;32mI (125528) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (134778) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.9[0m
+[0;32mI (134778) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (134788) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 65[0m
+[0;32mI (135058) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (135058) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.9
+[0;32mI (135278) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (135278) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (135288) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 65
+[0;32mI (135298) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (144788) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.4[0m
+[0;32mI (144788) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (144798) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 70[0m
+[0;32mI (145018) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (145018) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.4
+[0;32mI (145398) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (145408) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (145408) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 70
+[0;32mI (145418) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (154798) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.5[0m
+[0;32mI (154798) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (154808) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 75[0m
+[0;32mI (155128) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (155128) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.5
+[0;32mI (155368) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (155368) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (155378) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (155388) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 75
+[0;32mI (164808) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.4[0m
+[0;32mI (164808) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (164818) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 80[0m
+[0;32mI (165288) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (165288) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.4
+[0;32mI (165818) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (165828) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (165828) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 80
+[0;32mI (165838) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (174818) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.3[0m
+[0;32mI (174818) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (174828) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 85[0m
+[0;32mI (175198) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (175198) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.3
+[0;32mI (175658) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (175658) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (175658) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 85
+[0;32mI (175668) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (184828) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.0[0m
+[0;32mI (184828) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (184838) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 90[0m
+����������������������������������������������������������������Other MQTT event id:5[0m
+[0;32mI (185138) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.0
+[0;32mI (185358) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (185358) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (185358) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (185368) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 90
+[0;32mI (194838) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.2[0m
+[0;32mI (194838) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (194848) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 95[0m
+[0;32mI (195268) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (195268) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.2
+[0;32mI (195688) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (195688) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (195688) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (195698) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 95
+[0;32mI (204848) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.0[0m
+[0;32mI (204848) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (204858) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 100[0m
+[0;32mI (205608) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (205668) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.0
+[0;32mI (206028) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (206028) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (206038) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (206048) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 100
+[0;32mI (214858) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.5[0m
+[0;32mI (214858) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (214868) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 105[0m
+[0;32mI (214988) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (215318) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.5
+[0;32mI (215318) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (215328) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (215338) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (215348) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 105
+[0;32mI (224868) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.6[0m
+[0;32mI (224868) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (224878) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 110[0m
+[0;32mI (224968) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (224998) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.6
+[0;32mI (225118) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (225118) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 110
+[0;32mI (225128) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (225138) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (234878) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.6[0m
+[0;32mI (234878) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (234888) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 115[0m
+[0;32mI (234998) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (235378) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.6
+[0;32mI (235378) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (235378) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (235388) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (235408) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 115
+[0;32mI (244888) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.0[0m
+[0;32mI (244888) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (244898) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 120[0m
+[0;32mI (245038) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (245048) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.0
+[0;32mI (245208) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (245218) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 120
+[0;32mI (245218) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (245228) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (254898) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.2[0m
+[0;32mI (254898) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (254908) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 125[0m
+[0;32mI (255078) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (255078) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.2
+[0;32mI (255238) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (255238) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (255248) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 125
+[0;32mI (255258) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (264908) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.2[0m
+[0;32mI (264908) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (264918) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 130[0m
+[0;32mI (265308) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (265318) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.2
+[0;32mI (265628) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (265628) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (265638) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 130
+[0;32mI (265648) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (274918) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.7[0m
+[0;32mI (274918) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (274928) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 135[0m
+[0;32mI (275038) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (275078) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.7
+[0;32mI (275248) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (275258) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (275258) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 135
+[0;32mI (275268) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (284928) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.0[0m
+[0;32mI (284928) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (284938) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 140[0m
+[0;32mI (285178) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (285178) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.0
+[0;32mI (285318) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (285328) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (285328) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (285338) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 140
+[0;32mI (294938) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.7[0m
+[0;32mI (294938) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (294948) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 145[0m
+[0;32mI (295358) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (295358) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.7
+[0;32mI (295618) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (295628) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 145
+[0;32mI (295628) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (295638) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (304948) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.7[0m
+[0;32mI (304948) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (304958) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 150[0m
+[0;32mI (305058) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (305078) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.7
+[0;32mI (305218) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (305228) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (305228) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (305238) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 150
+[0;32mI (314958) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.2[0m
+[0;32mI (314958) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (314968) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 155[0m
+[0;32mI (315098) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (315098) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.2
+[0;32mI (315428) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (315428) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 155
+[0;32mI (315438) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (315448) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (324968) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.8[0m
+[0;32mI (324968) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (324978) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 160[0m
+[0;32mI (325148) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (325148) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.8
+[0;32mI (325418) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (325428) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (325428) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (325438) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 160
+[0;32mI (334978) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.6[0m
+[0;32mI (334978) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (334988) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 165[0m
+[0;32mI (335198) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (335198) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.6
+[0;32mI (335448) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (335448) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 165
+[0;32mI (335458) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (335468) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (344988) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.4[0m
+[0;32mI (344988) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (344998) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 170[0m
+[0;32mI (345328) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (345338) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.4
+[0;32mI (345698) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (345698) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 170
+[0;32mI (345708) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (345718) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (354998) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.2[0m
+[0;32mI (354998) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (355008) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 175[0m
+[0;32mI (355128) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (355138) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.2
+[0;32mI (355228) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (355268) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 175
+[0;32mI (355288) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (355298) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (365008) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.9[0m
+[0;32mI (365008) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (365018) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 180[0m
+[0;32mI (365458) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (365468) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.9
+[0;32mI (365678) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (365678) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (365688) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (365698) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 180
+[0;32mI (375018) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.8[0m
+[0;32mI (375018) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (375028) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 185[0m
+[0;32mI (375118) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (375148) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.8
+[0;32mI (375208) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (375258) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (375258) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (375268) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 185
+[0;32mI (385028) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.3[0m
+[0;32mI (385028) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (385038) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 190[0m
+[0;32mI (385438) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (385438) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.3
+[0;32mI (385678) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (385688) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 190
+[0;32mI (385688) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (385698) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (395038) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.1[0m
+[0;32mI (395038) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (395048) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 195[0m
+[0;32mI (395368) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (395378) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.1
+[0;32mI (395608) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (395608) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (395618) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 195
+[0;32mI (395628) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (405048) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.1[0m
+[0;32mI (405048) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (405058) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 200[0m
+[0;32mI (405188) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (405198) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.1
+[0;32mI (405398) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (405408) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (405408) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (405418) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 200
+[0;32mI (415058) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.2[0m
+[0;32mI (415058) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (415068) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 205[0m
+[0;32mI (415168) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (415538) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.2
+[0;32mI (415538) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (415548) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (415558) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (415568) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 205
+[0;32mI (425068) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.8[0m
+[0;32mI (425068) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (425078) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 210[0m
+[0;32mI (425308) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (425318) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.8
+[0;32mI (425488) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (425498) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (425498) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 210
+[0;32mI (425508) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (435078) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.1[0m
+[0;32mI (435078) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (435088) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 215[0m
+[0;32mI (435238) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (435248) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.1
+[0;32mI (435408) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (435408) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 215
+[0;32mI (435418) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (435428) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (445088) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.7[0m
+[0;32mI (445088) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (445098) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 220[0m
+[0;32mI (445228) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (445238) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.7
+[0;32mI (445538) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (445548) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (445548) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (445558) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 220
+[0;32mI (455098) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.2[0m
+[0;32mI (455098) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (455108) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 225[0m
+[0;32mI (455288) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (455288) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.2
+[0;32mI (455618) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (455618) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 225
+[0;32mI (455628) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (455638) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (465108) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.9[0m
+[0;32mI (465108) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (465118) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 230[0m
+[0;32mI (465338) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (465348) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.9
+[0;32mI (465708) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (465708) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (465718) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (465728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 230
+[0;32mI (475118) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.6[0m
+[0;32mI (475118) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (475128) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 235[0m
+[0;32mI (475588) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (475588) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.6
+[0;32mI (476058) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (476058) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 235
+[0;32mI (476058) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (476068) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (485128) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.3[0m
+[0;32mI (485128) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (485138) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 240[0m
+[0;32mI (485378) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (485388) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.3
+[0;32mI (485708) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (485718) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (485718) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (485728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 240
+[0;32mI (495138) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.4[0m
+[0;32mI (495138) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (495148) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 245[0m
+[0;32mI (495548) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (495548) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.4
+[0;32mI (495718) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (495718) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (495728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (495728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 245
+[0;32mI (505148) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.6[0m
+[0;32mI (505148) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (505158) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 250[0m
+[0;32mI (505338) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (505338) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.6
+[0;32mI (505648) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (505658) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (505658) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (505668) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 250
+����������������������������������������������������������������PUB Carmensita0249041/feeds/u0249041.temperature -> 28.5[0m
+[0;32mI (515158) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (515168) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 255[0m
+[0;32mI (515288) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (515298) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.5
+[0;32mI (515458) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (515458) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (515468) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (515478) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 255
+[0;32mI (525168) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.2[0m
+[0;32mI (525168) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (525178) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 260[0m
+[0;32mI (525408) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (525408) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.2
+[0;32mI (525628) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (525638) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (525638) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 260
+[0;32mI (525648) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (535178) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.6[0m
+[0;32mI (535178) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (535188) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 265[0m
+[0;32mI (535378) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (535378) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.6
+[0;32mI (535658) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (535658) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (535668) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (535678) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 265
+[0;32mI (545188) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.3[0m
+[0;32mI (545188) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (545198) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 270[0m
+[0;32mI (545628) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (545628) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.3
+[0;32mI (546038) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (546038) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (546048) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 270
+[0;32mI (546058) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (555198) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.7[0m
+[0;32mI (555198) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (555208) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 275[0m
+[0;32mI (555408) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (555418) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.7
+[0;32mI (555818) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (555828) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 275
+[0;32mI (555828) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (555838) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (565208) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.2[0m
+[0;32mI (565208) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (565218) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 280[0m
+[0;32mI (565758) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (565768) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.2
+[0;32mI (565868) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (565888) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (565888) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (565898) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 280
+[0;32mI (575218) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.4[0m
+[0;32mI (575218) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (575228) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 285[0m
+[0;32mI (575328) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (575488) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.4
+[0;32mI (575488) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (575488) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (575498) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (575508) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 285
+[0;32mI (585228) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.0[0m
+[0;32mI (585228) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (585238) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 290[0m
+[0;32mI (585518) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (585518) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.0
+[0;32mI (585828) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (585828) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (585838) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 290
+[0;32mI (585848) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (595238) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.7[0m
+[0;32mI (595238) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (595248) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 295[0m
+[0;32mI (595498) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (595498) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.7
+[0;32mI (595868) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (595868) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (595868) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (595878) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 295
+[0;32mI (605248) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.0[0m
+[0;32mI (605248) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (605258) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 300[0m
+[0;32mI (605518) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (605518) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.0
+[0;32mI (605848) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (605848) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (605848) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 300
+[0;32mI (605858) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (615258) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.4[0m
+[0;32mI (615258) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (615268) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 305[0m
+[0;32mI (615518) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (615528) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.4
+[0;32mI (616038) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (616038) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (616048) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 305
+[0;32mI (616058) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (625268) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.3[0m
+[0;32mI (625268) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (625278) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 310[0m
+[0;32mI (625658) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (625668) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.3
+[0;32mI (625778) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (625788) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (625798) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (625808) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 310
+[0;32mI (635278) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.5[0m
+[0;32mI (635278) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (635288) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 315[0m
+[0;32mI (635488) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (635498) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.5
+[0;32mI (635738) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (635748) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (635748) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 315
+[0;32mI (635758) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (645288) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.3[0m
+[0;32mI (645288) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (645298) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 320[0m
+[0;32mI (645448) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (645458) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.3
+[0;32mI (645548) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (645578) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (645588) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (645588) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 320
+[0;32mI (655298) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.9[0m
+[0;32mI (655298) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (655308) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 325[0m
+[0;32mI (655458) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (655458) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.9
+[0;32mI (655618) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (655618) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (655628) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (655638) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 325
+[0;32mI (665308) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.6[0m
+[0;32mI (665308) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (665318) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 330[0m
+[0;32mI (665598) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (665598) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.6
+[0;32mI (665898) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (665908) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (665908) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 330
+[0;32mI (665918) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (675318) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.1[0m
+[0;32mI (675318) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (675328) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 335[0m
+[0;32mI (675728) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (675738) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (675738) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (675748) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 335
+[0;32mI (675758) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.1
+[0;32mI (675768) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (685328) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.0[0m
+[0;32mI (685328) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (685338) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 340[0m
+[0;32mI (685458) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (685468) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.0
+[0;32mI (685728) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (685728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (685728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 340
+[0;32mI (685738) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (695338) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.3[0m
+[0;32mI (695338) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (695348) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 345[0m
+[0;32mI (695498) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (695498) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.3
+[0;32mI (695598) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (695628) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (695638) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (695638) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 345
+[0;32mI (705348) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.6[0m
+[0;32mI (705348) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (705358) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 350[0m
+[0;32mI (705538) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (705538) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.6
+[0;32mI (705648) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (705668) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (705668) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 350
+[0;32mI (705678) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (715358) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.6[0m
+[0;32mI (715358) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (715368) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 355[0m
+[0;32mI (715598) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (715608) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.6
+[0;32mI (715688) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (715728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (715728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (715768) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 355
+����������������������������������������������������������������PUB Carmensita0249041/feeds/u0249041.temperature -> 26.7[0m
+[0;32mI (725368) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (725378) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 360[0m
+[0;32mI (725598) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (725608) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.7
+[0;32mI (725918) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (725918) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (725918) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (725928) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 360
+[0;32mI (735378) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.0[0m
+[0;32mI (735378) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (735388) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 365[0m
+[0;32mI (735638) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (735648) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.0
+[0;32mI (735768) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (735778) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (735798) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (735818) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 365
+[0;32mI (745388) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.5[0m
+[0;32mI (745388) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (745398) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 370[0m
+[0;32mI (745488) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (745538) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.5
+[0;32mI (745578) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (745808) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (745808) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (745818) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 370
+[0;32mI (755398) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.1[0m
+[0;32mI (755398) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (755408) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 375[0m
+[0;32mI (755518) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (755528) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.1
+[0;32mI (755608) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (755648) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (755658) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 375
+[0;32mI (765408) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.7[0m
+[0;32mI (765408) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (765418) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 380[0m
+[0;32mI (765558) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (765568) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.7
+[0;32mI (765648) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (765678) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (765688) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (765698) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 380
+[0;32mI (775418) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.4[0m
+[0;32mI (775418) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (775428) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 385[0m
+[0;32mI (775578) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (775578) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.4
+[0;32mI (775688) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (775708) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 385
+[0;32mI (775708) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (775718) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (785428) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.2[0m
+[0;32mI (785428) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (785438) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 390[0m
+[0;32mI (785648) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (785648) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.2
+[0;32mI (785818) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (785818) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (785818) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (785838) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 390
+[0;32mI (795438) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.1[0m
+[0;32mI (795438) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (795448) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 395[0m
+[0;32mI (795688) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (795688) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.1
+[0;32mI (795778) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (795808) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (795838) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 395
+[0;32mI (795838) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (805448) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.2[0m
+[0;32mI (805448) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (805458) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 400[0m
+[0;32mI (805578) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (805588) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.2
+[0;32mI (805718) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (805728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (805728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 400
+[0;32mI (805738) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (815458) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.7[0m
+[0;32mI (815458) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (815468) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 405[0m
+[0;32mI (815608) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (815618) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.7
+[0;32mI (815818) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (815818) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 405
+[0;32mI (815828) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (825468) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.5[0m
+[0;32mI (825468) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (825478) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 410[0m
+[0;32mI (825568) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (825598) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.5
+[0;32mI (825718) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (825718) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 410
+[0;32mI (825728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (825738) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (835478) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.1[0m
+[0;32mI (835478) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (835488) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 415[0m
+[0;32mI (835598) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (835608) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.1
+[0;32mI (835788) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (835788) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (835798) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (835808) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 415
+[0;32mI (845488) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.6[0m
+[0;32mI (845488) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (845498) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 420[0m
+[0;32mI (845648) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (845648) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.6
+[0;32mI (845738) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (845918) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (845928) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (845938) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 420
+[0;32mI (855498) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.5[0m
+[0;32mI (855498) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (855508) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 425[0m
+[0;32mI (855708) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (855708) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.5
+[0;32mI (855868) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (855868) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (855878) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (855888) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 425
+[0;32mI (865508) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.0[0m
+[0;32mI (865508) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (865518) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 430[0m
+[0;32mI (865828) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (865828) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.0
+[0;32mI (865918) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (865948) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (865948) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 430
+[0;32mI (865958) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (875518) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.8[0m
+[0;32mI (875518) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (875528) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 435[0m
+[0;32mI (875718) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (875728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.8
+[0;32mI (876128) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (876138) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (876138) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 435
+[0;32mI (876148) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (885528) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.8[0m
+[0;32mI (885528) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (885538) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 440[0m
+[0;32mI (885758) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (885758) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.8
+[0;32mI (885888) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (885888) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (885898) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (885908) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 440
+[0;32mI (895538) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.1[0m
+[0;32mI (895538) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (895548) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 445[0m
+[0;32mI (895688) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (895698) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.1
+[0;32mI (895928) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (895938) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (895938) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (895948) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 445
+[0;32mI (905548) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.5[0m
+[0;32mI (905548) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (905558) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 450[0m
+[0;32mI (905728) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (905728) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.5
+[0;32mI (905838) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (905848) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (905858) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 450
+[0;32mI (905868) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (915558) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.9[0m
+[0;32mI (915558) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (915568) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 455[0m
+[0;32mI (915808) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (915808) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.9
+[0;32mI (916138) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (916138) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 455
+[0;32mI (916148) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (916158) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (925568) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.4[0m
+[0;32mI (925568) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (925578) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 460[0m
+[0;32mI (925728) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (925738) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.4
+[0;32mI (925838) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (925858) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 460
+[0;32mI (925868) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (925888) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (935578) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.1[0m
+[0;32mI (935578) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (935588) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 465[0m
+[0;32mI (935758) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (935768) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.1
+[0;32mI (936078) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (936078) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (936088) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (936098) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 465
+[0;32mI (945588) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.6[0m
+[0;32mI (945588) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (945598) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 470[0m
+[0;32mI (945768) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (945768) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.6
+[0;32mI (945898) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (945908) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (945908) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (945938) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 470
+[0;32mI (955598) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.7[0m
+[0;32mI (955598) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (955608) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 475[0m
+[0;32mI (955898) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (955908) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.7
+[0;32mI (956018) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (956028) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (956038) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 475
+[0;32mI (956048) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (965608) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.5[0m
+[0;32mI (965608) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (965618) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 480[0m
+[0;32mI (965758) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (965758) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.5
+[0;32mI (966098) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (966098) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (966108) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (966118) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 480
+[0;32mI (975618) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 29.1[0m
+[0;32mI (975618) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (975628) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 485[0m
+[0;32mI (975768) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (975768) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 29.1
+[0;32mI (976078) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (976078) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (976088) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (976098) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 485
+[0;32mI (985628) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.9[0m
+[0;32mI (985628) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (985638) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 490[0m
+[0;32mI (985748) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (985758) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.9
+[0;32mI (985848) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (985908) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (985908) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 490
+[0;32mI (985918) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (995638) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.7[0m
+[0;32mI (995638) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (995648) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 495[0m
+[0;32mI (995938) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (995948) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.7
+[0;32mI (996408) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (996408) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (996418) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (996428) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 495
+[0;32mI (1005648) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.0[0m
+[0;32mI (1005648) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (1005658) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 500[0m
+[0;32mI (1005978) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1005988) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.0
+[0;32mI (1006198) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1006198) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (1006208) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (1006218) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 500
+[0;32mI (1015658) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.1[0m
+[0;32mI (1015658) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (1015668) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 505[0m
+[0;32mI (1015948) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1015948) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.1
+[0;32mI (1016318) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1016318) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (1016328) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (1016338) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 505
+���������������������������������������������������������������� PUB Carmensita0249041/feeds/u0249041.temperature -> 28.4[0m
+[0;32mI (1025668) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (1025678) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 510[0m
+[0;32mI (1025768) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1025808) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.4
+[0;32mI (1025988) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1025988) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (1025998) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (1026008) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 510
+[0;32mI (1035678) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.0[0m
+[0;32mI (1035678) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6748,-103.3525[0m
+[0;32mI (1035688) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 515[0m
+[0;32mI (1035808) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1035808) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.0
+[0;32mI (1035978) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1035988) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (1035988) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 515
+[0;32mI (1035998) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6748,-103.3525
+[0;32mI (1045688) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.0[0m
+[0;32mI (1045688) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6761,-103.3612[0m
+[0;32mI (1045698) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 520[0m
+[0;32mI (1045908) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1045918) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.0
+[0;32mI (1046328) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1046328) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (1046338) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 520
+[0;32mI (1046348) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6761,-103.3612
+[0;32mI (1055698) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 28.9[0m
+[0;32mI (1055698) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6774,-103.3689[0m
+[0;32mI (1055708) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 525[0m
+[0;32mI (1055848) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1055848) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 28.9
+[0;32mI (1056058) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1056058) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (1056058) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6774,-103.3689
+[0;32mI (1056068) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 525
+[0;32mI (1065708) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 27.3[0m
+[0;32mI (1065708) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6802,-103.3755[0m
+[0;32mI (1065718) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 530[0m
+[0;32mI (1065808) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1065828) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 27.3
+[0;32mI (1065968) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1065978) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6802,-103.3755
+[0;32mI (1065978) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (1065988) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 530
+[0;32mI (1075718) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.6[0m
+[0;32mI (1075718) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6840,-103.3801[0m
+[0;32mI (1075728) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 535[0m
+[0;32mI (1075848) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1075858) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.6
+[0;32mI (1075938) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1075978) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6840,-103.3801
+[0;32mI (1075978) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 535
+[0;32mI (1075988) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (1085728) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.temperature -> 26.8[0m
+[0;32mI (1085728) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.gps -> 20.6736,-103.3440[0m
+[0;32mI (1085738) MQTT_EXAMPLE: PUB Carmensita0249041/feeds/u0249041.uptime -> 540[0m
+[0;32mI (1085948) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1085958) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.temperature
+Msg  : 26.8
+[0;32mI (1086078) MQTT_EXAMPLE: Other MQTT event id:5[0m
+[0;32mI (1086088) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.gps
+Msg  : 20.6736,-103.3440
+[0;32mI (1086098) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.status
+Msg  : online
+[0;32mI (1086108) MQTT_EXAMPLE: MQTT_EVENT_DATA[0m
+Topic: Carmensita0249041/feeds/u0249041.uptime
+Msg  : 540

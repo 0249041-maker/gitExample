@@ -1,0 +1,7 @@
+timestamp_utc,topic,payload,qos,retain
+2025-10-26T01:39:49.438008,u0249041/data/status,hola MQTT v5,0,0
+2025-10-26T01:43:41.279740,u0249041/data/status,hola MQTT v5,0,0
+2025-10-26T01:46:33.466140,u0249041/data/status,hola MQTT v5,0,0
+2025-10-26T01:49:00.836709,u0249041/data/status,hola MQTT v5,0,0
+2025-10-26T01:49:21.952007,u0249041/data/status,hola MQTT v5,0,0
+2025-10-26T01:49:21.952011+00:00,u0249041/data/status,hola MQTT v5,0,0

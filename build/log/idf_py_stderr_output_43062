@@ -1,0 +1,9 @@
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c: In function 'publish_task':
+/home/carmen/Documents/FreeRTOSCourse/Classwork/MQTT/mqtt5/main/app_main.c:57:31: error: implicit declaration of function 'esp_random'; did you mean 'srandom'? [-Werror=implicit-function-declaration]
+   57 |         float temp = 26.5f + (esp_random() % 30) / 10.0f;
+      |                               ^~~~~~~~~~
+      |                               srandom
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:76: esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:4613: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

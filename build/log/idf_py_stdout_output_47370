@@ -1,0 +1,112 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 21:21:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (75) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (90) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27d9ch (163228) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00037dc4 vaddr=3ffb0000 size=03c04h ( 15364) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003b9d0 vaddr=40080000 size=04648h ( 17992) load[0m
+[0;32mI (171) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9c3e8h (639976) map[0m
+[0;32mI (392) esp_image: segment 4: paddr=000dc410 vaddr=40084648 size=12038h ( 73784) load[0m
+[0;32mI (432) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (432) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: Pro cpu start user code[0m
+[0;32mI (453) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (453) cpu_start: Application information:[0m
+[0;32mI (456) cpu_start: Project name:     mqtt5[0m
+[0;32mI (460) cpu_start: App version:      775dc94-dirty[0m
+[0;32mI (466) cpu_start: Compile time:     Oct 25 2025 21:21:54[0m
+[0;32mI (472) cpu_start: ELF file SHA256:  d52d19d9a...[0m
+[0;32mI (477) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (482) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (487) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (492) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (497) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (504) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (510) heap_init: At 3FFB8308 len 00027CF8 (159 KiB): DRAM[0m
+[0;32mI (516) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (522) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 40096680 len 00009980 (38 KiB): IRAM[0m
+[0;32mI (536) spi_flash: detected chip: generic[0m
+[0;32mI (539) spi_flash: flash io: dio[0m
+[0;33mW (543) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (558) main_task: Started on CPU0[0m
+[0;32mI (568) main_task: Calling app_main()[0m
+[0;32mI (608) wifi:wifi driver task: 3ffc0280, prio:23, stack:6656, core=0[0m
+[0;32mI (618) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (618) wifi:wifi certification version: v7.0[0m
+[0;32mI (628) wifi:config NVS flash: enabled[0m
+[0;32mI (628) wifi:config nano formating: disabled[0m
+[0;32mI (628) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (628) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (638) wifi:Init management short buffer num: 32[0m
+[0;32mI (638) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (648) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (648) wifi:Init static rx buffer num: 10[0m
+[0;32mI (648) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (658) wifi_init: rx ba win: 6[0m
+[0;32mI (658) wifi_init: tcpip mbox: 32[0m
+[0;32mI (668) wifi_init: udp mbox: 6[0m
+[0;32mI (668) wifi_init: tcp mbox: 6[0m
+[0;32mI (668) wifi_init: tcp tx win: 5760[0m
+[0;32mI (678) wifi_init: tcp rx win: 5760[0m
+[0;32mI (678) wifi_init: tcp mss: 1440[0m
+[0;32mI (688) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (688) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (698) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (788) wifi:mode : sta (68:25:dd:30:22:90)[0m
+[0;32mI (788) wifi:enable tsf[0m
+[0;32mI (788) main_task: Returned from app_main()[0m
+[0;32mI (798) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (808) wifi:state: init -> auth (b0)[0m
+[0;32mI (808) wifi:state: auth -> assoc (0)[0m
+[0;32mI (808) wifi:state: assoc -> run (10)[0m
+[0;33mW (828) wifi:[ADDBA]rx delba, code:39, delete tid:0[0m
+[0;33mW (828) wifi:[ADDBA]rx delba, code:39, delete tid:0[0m
+[0;33mW (828) wifi:[ADDBA]rx delba, code:39, delete tid:6[0m
+[0;32mI (918) wifi:connected with OROZCO_2.4, aid = 13, channel 1, BW20, bssid = b8:dd:71:e9:f0:48[0m
+[0;32mI (918) wifi:security: WPA2-PSK, phy: bgn, rssi: -65[0m
+[0;32mI (928) wifi:pm start, type: 1[0m
+
+[0;32mI (928) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (978) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3038) wifi:<ba-add>idx:0 (ifx:0, b8:dd:71:e9:f0:48), tid:0, ssn:0, winSize:64[0m
+[0;32mI (3938) esp_netif_handlers: sta ip: 192.168.1.75, mask: 255.255.255.0, gw: 192.168.1.254[0m
+[0;32mI (3938) MQTT_EXAMPLE: Wi-Fi connected![0m
+[0;32mI (3938) MQTT_EXAMPLE: Other MQTT event id:7[0m
+[0;32mI (3958) wifi:<ba-add>idx:1 (ifx:0, b8:dd:71:e9:f0:48), tid:6, ssn:2, winSize:64[0m
+[0;33mW (4368) mqtt5_client: Connection refused, Unknow reason[0m
+[0;32mI (4368) MQTT_EXAMPLE: Other MQTT event id:0[0m
+[0;31mE (4368) mqtt_client: MQTT connect failed[0m
+[0;32mI (4378) MQTT_EXAMPLE: Other MQTT event id:2[0m
+[0;32mI (19378) MQTT_EXAMPLE: Other MQTT event id:7[0m
+[0;33mW (19758) mqtt5_client: Connection refused, Unknow reason[0m
+[0;32mI (19768) MQTT_EXAMPLE: Other MQTT event id:0[0m
+[0;31mE (19768) mqtt_client: MQTT connect failed[0m
+[0;32mI (19768) MQTT_EXAMPLE: Other MQTT event id:2[0m
+[0;32mI (29778) MQTT_EXAMPLE: Other MQTT event id:7[0m
+[0;33mW (30098) mqtt5_client: Connection refused, Unknow reason[0m
+[0;32mI (30098) MQTT_EXAMPLE: Other MQTT event id:0[0m
+[0;31mE (30108) mqtt_client: MQTT connect failed[0m
+[0;32mI (30108) MQTT_EXAMPLE: Other MQTT event id:2[0m
